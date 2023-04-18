@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Generator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="static/styles/button.css" />
+    <link rel="stylesheet" href="static/styles/new.css" />
+    <style>
+      body {
+        background-image: url('back.jpg');
+        background-size: 100%;
+      }
+      </style>
+    <script>
+      function generatePassword(
+        length,
+        uppercase,
+        lowercase,
+        numbers,
+        symbols
+      ) {
+        var charset = "";
+        if (uppercase) {
+          charset += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        }
+        if (lowercase) {
+          charset += "abcdefghijklmnopqrstuvwxyz";
+        }
+        if (numbers) {
+          charset += "0123456789";
+        }
+        if (symbols) {
+          charset += '!@#$%^&*()_+~`|}{[]:;?><,./-=\\"';
+        }
+        var password = "";
+        for (var i = 0; i < length; i++) {
+          password += charset.charAt(
+            Math.floor(Math.random() * charset.length)
+          );
+        }
+        let result = password;
+        document.getElementById("myInput").value = result;
+        return 0;
+      }
+    </script>
+  </head>
+  <body>
+    <p align="center">
+      <font face="Comic Sans MS" size="10">PASSWORD GENERATOR</font>
+    </p>
+    <p align = "center"><input type="text" id="myInput" class="text-field__input"></p>
+    <button class="newButton" onclick="generatePassword(16, true, true, true, true)">
+      <font face="Comic Sans MS" size="5">Жмяк</font>
+    </button>
+  </body>
+</html>
