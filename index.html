@@ -16,8 +16,12 @@
     <script>
       function test() {
         var inputValue = document.getElementById("myInput").value;
-        if (inputValue < 21) {
+        if (inputValue < 21 || inputValue > 6) {
           generatePassword(inputValue, true, true, true, true);
+        }if(inputValue < 6){
+          document.getElementById("myInput2").value = "Пароль меньше 6";
+        }if(inputValue > 21){
+          document.getElementById("myInput2").value = "Пароль больше 21";
         }
       }
       function generatePassword(
@@ -70,6 +74,7 @@
         type="text"
         id="myInput2"
         class="text-field"
+        readonly
       />
     </p>
     <button class="newButton" onclick="test()">
