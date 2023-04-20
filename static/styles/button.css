@@ -1,6 +1,8 @@
 .newButton{
+    width: 250px;
+    height: 50px;
     margin-top: 25px;
-    margin-left: 915px;
+    margin-left: 825px;
     border-style: double;
     border-radius: 12px;
     background-color: antiquewhite;
