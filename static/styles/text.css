@@ -1,8 +1,10 @@
 .text-field{
-    position: fixed;
+    position: static;
+    text-align: center;
     font-size: 30px;
-    top: 35%;
-    right: 41%;
+    margin: 0 auto;
+    display: block;
+    top: auto;
     width: 350px;
     height: 100px;
     border-color: black;
