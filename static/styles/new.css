@@ -1,6 +1,8 @@
 .text-field__input{
+    position: fixed;
+    right: 41%;
+    top: 20%;
     font-size: 30px;
-    margin-top: 175px;
     width: 350px;
     height: 100px;
     border-color: black;
